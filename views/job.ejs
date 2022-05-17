@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% include layout %>
+    <link rel="stylesheet" href="/stylesheets/jobs.css">
+
+</head>
+
+<body>
+    <% include includes/nav %>
+    <div class="banner">
+        <div class="bannerbg">
+            <div class="title">
+                <h4 align="center"><%= data.position %> | <%= data.location.toUpperCase() %> </h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="job-info">
+            <div class="row">
+                <div class="col l2 s3">
+                    <div class="chip">
+                        <b>
+
+                            Position
+                        </b>
+                    </div>
+                </div>
+                <div class="col l10 s9">
+
+                    <%= data.position  %>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <% include includes/footer %>>
+
+</body>
+
+</html>

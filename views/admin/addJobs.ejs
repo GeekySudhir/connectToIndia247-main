@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% include ../layout %>
+    <link rel="stylesheet" href="/stylesheets/jobs.css">
+
+</head>
+
+<body>
+    <% include ../includes/nav %>
+    <div class="banner">
+        <div class="bannerbg">
+            <div class="title">
+                <h4 align="center">Admin | Add new Jobs </h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="add-job">
+            <h5 align="center"><b>Enter a new job</b> </h5>
+            <p align="center">Jobs entered here will reflect in jobs list.</p>
+            <form method="POST" action="/add/job">
+                <div class="row">
+                    <div class="input-field col s6 l4">
+                        <input id="last_name" type="text" class="validate" name="position">
+                        <label for="last_name">Position</label>
+                    </div>
+                    <div class="input-field col s6 l4">
+                        <input id="last_name" type="text" class="validate" name="code">
+                        <label for="last_name">Job Code</label>
+                    </div>
+                    <div class="input-field col s6 l4">
+                        <input id="last_name" type="text" class="validate" name="company">
+                        <label for="last_name">Company</label>
+                    </div>
+                    <div class="input-field col s6 l4">
+                        <input id="last_name" type="text" class="validate" name="location">
+                        <label for="last_name">Location</label>
+                    </div>
+                    <div class="input-field col s6 l4">
+                        <input id="last_name" type="number" class="validate" name="ageLimit">
+                        <label for="last_name">Age limit</label>
+                    </div>
+                    <div class="input-field col s6 l4">
+                        <input id="last_name" type="text" class="validate" name="qualification">
+                        <label for="last_name">Qualification</label>
+                    </div>
+
+                    <div class="input-field col s6 l4">
+                        <input id="last_name" type="number" class="validate" name="experience">
+                        <label for="last_name">Experience in Years</label>
+                    </div>
+                    <div class="input-field col s6 l4">
+                        <select class="browser-default" name="gender">
+                            <option value="" disabled selected>Select the gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="any">Any</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <button class="btn btn-warning center" type="submit">Add the job</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
+</script>
+
+</html>

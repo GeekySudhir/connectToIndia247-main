@@ -1,0 +1,65 @@
+<html>
+
+<head>
+
+    <% include ../layout %>
+    <link rel="stylesheet" href="/stylesheets/jobs.css">
+</head>
+
+<body>
+    <% include ../includes/nav %>
+    <div class="banner">
+        <div class="bannerbg">
+            <div class="title">
+                <h4 align="center">SEARCH FOR THE JOB THAT YOU ARE LOOKING FOR</h4>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="table-container">
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Position</th>
+                        <th>Job Code</th>
+                        <th>Company</th>
+                        <th>Location</th>
+                        <th>Age Limit</th>
+                        <th>Qualification</th>
+                        <th>Gender</th>
+                        <th>Exp(Yrs)</th>
+                        <th>Created On</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% for(var i=0; i < data.length; i++) { %>
+                    <tr>
+                        <td><%= i+1 %></td>
+                        <td><%= data[i].position %></td>
+                        <td><%= data[i].code %></td>
+                        <td><%= data[i].company %></td>
+                        <td><%= data[i].location %></td>
+                        <td><%= data[i].ageLimit %></td>
+                        <td><%= data[i].qualification %></td>
+                        <td><%= data[i].gender %></td>
+                        <td><%= data[i].experience %></td>
+                        <td><%= data[i].createdOn.toLocaleDateString() %></td>
+                        <td>
+                            <a class="waves-effect waves-light btn-small">Delete</a>
+                        </td>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <% include ../includes/footer %>
+</body>
+
+</html>
